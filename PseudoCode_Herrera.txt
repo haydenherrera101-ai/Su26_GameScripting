@@ -1,0 +1,192 @@
+﻿# pseudoCode_01
+This is a fundamental to handling the flow with pseudo code using GitHub
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Convert user-input into all caps, print the result.
+
+
+Variable List: 
+userInput = “”
+inputCapped = “”
+
+
+1. Ask the user for a phrase to convert to uppercase
+   a. userInput = user’s entered phrase
+2. Check the phrase for any lowercase letters and convert them to uppercase.
+3. inputCapped = userInput uppercased
+4. Print inputCapped
+   
+While userInput is either EMPTY, ONLY DIGITS, or ALREADY CAPPED
+
+
+1. Ask user for a phrase to convert to uppercase
+   a. userInput = user’s entered phrase
+   b. CHECK if EMPTY , ONLY DIGITS, or ALREADY CAPPED (repeat if true, exit if not)
+   
+END WHILE
+
+
+2. To uppercase each character that is lowercase. Store in inputCapped
+
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+Have the user input two numbers, add them together and print the result.
+
+
+
+
+Variable List: 
+num1 = “”
+num2 = “”
+total = “”
+
+
+
+
+1. Ask user for first number
+  a. store input in num 1
+2. Ask user for second number
+  b. store input in num 2
+3. total = num1+ num2 
+4. Print total
+   
+1. While num1 is EMPTY or NOT A NUMBER
+  a. Ask user for number
+  b. Store input in num1
+  c. Check if num1 is EMPTY or NOT A NUMBER 
+2. While num2 is EMPTY or NOT A NUMBER
+  a. Ask user for number
+  b. Store input in num2
+  c. Check if num2 is EMPTY or NOT A NUMBER 
+3. total = num1 + num2
+4. Print total
+
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Get an unknown amount of numbers from the user and add them together, print out the result.
+
+
+
+
+Variable List:
+newNumb = “”
+total = 0
+mathDone = false
+userInput = “”
+
+
+WHILE mathDone = false
+1. WHILE newNumb is EMPTY or NOT A NUMBER
+  a. Ask user for a number 
+  b. Store input in newNumb
+  c. Check if newNumb is empty or not a number
+
+
+END WHILE
+
+
+3. total = total + newNumb
+4. Ask user if they want to enter another number (Y/N)
+   
+         IF userInput NOT y
+                  mathDone = true
+  ELSE
+                 newNum = “”
+     userInput = “”
+  END IF ELSE
+
+
+  END WHILE
+
+
+5. Print total
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Have the user define a maximum whole number, print out a random number between 0 and their number. Allow the user to play again or quit.
+
+
+Variable List: 
+newNumb = yes (requires new number)
+maxNumb = “”
+
+
+
+
+**Defines user max for entire time playing. All numbers will be between 0 and this. IF I wanted to change max every time, move into WHILE loop.
+1. WHILE newNumb is EMPTY or NOT A NUMBER
+  a. Ask user for a number 
+  b. Store input in newNumb
+  c. Check if newNumb is empty or not a number
+
+
+END WHILE
+
+
+WHILE newNum = yes (while still wanting another random number)
+  2. Print random number between 0 and maxNumb
+  3. Ask user if they want to enter another number (user input = newNumb)
+IF newNumb = yes
+                 continue (nothing)
+ELSE
+                break (no more numbers)
+END IF ELSE
+
+
+END WHILE
+
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Get a random number. If the number is even, print “RIGHT”, if it’s odd, print “LEFT”. Do this ten times. Print out how many times it was “LEFT” and how many times it was “RIGHT”.
+
+
+Variable List:
+randomNumb = “”
+leftCount = “”
+rightCount = “”
+counter = 0
+userInput = ""
+
+
+1. Repeat the counter 10 times
+   a. WHILE counter < 10
+2. Generate random number
+   b. userInput MOD (%) 2.
+   randomNumb = RANDOM(1,100)
+   
+3. Once it generates a number, check if the input is even or odd
+   a. IF 0, THEN even (right)
+   b. IF 1 THEN odd (left)
+
+
+   IF randomNumb MOD 2 = 0
+     PRINT randomNumb + " RIGHT"
+     rightCount = leftCount + 1
+   
+   ELSE
+     PRINT randomNumb + " LEFT"
+     leftCount = leftCount + 1
+
+
+5. Increase the counter by 1
+   a. counter = counter + 1
+
+
+    IF randomNumb MOD 2 = 0
+     PRINT randomNumb + " RIGHT"
+     Increase rightCount by 1
+   ELSE
+     PRINT randomNumb + " LEFT"
+     Increase leftCount by 1
+
+
+6. Print 10 numbers that have been processed from leftCount and rightCount
+   a. PRINT "Left: " + leftCount
+   b. PRINT "Right: " + rightCount
