@@ -1,1 +1,63 @@
-Test Second
+# pseudoCode_02
+This is pseudo code for a guessing game and will be explaining its funcitons step for step
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Create pseudocode for a number guessing game. Start with the game loop to create this simple game.
+
+
+
+Variable List:
+userInput = ""
+randNumb = 0
+guessCounter = 0
+playAgain = "y" 
+gameWon = false (if player answers correctly)
+
+
+Generate random number between 1 and 100
+  1. randNumb MOD (%) 2.
+     randNumb = RANDOM(1,100)
+
+
+Repeat while the game has yet to be won and less than 7 guesses remaining
+  1. WHILE userInput is EMPTY or NOT A NUMBER
+  a. Ask user for a number 
+  b. Store input in userInput
+  c. Check if userInput is empty or not a number
+
+
+Increases guessCount by 1 (If player guesses incorrectly)\\
+  1. guessCounter = guessCounter + 1
+
+
+Compare the user's guess to the secret number 
+  1. IF userInput < randNumb, THEN print "Too Low."
+  2. IF userInput > randNumb, THEN print "Too High."
+  3. IF userInput = randNumb, THEN print "Correct!"
+
+
+After loop ends (User wins or loses) 
+  1. If user won:
+	Print "Congrats! You guessed the number in " + guessCount + " guesses!"
+  2. ELSE IF
+	Print "You have used up all 7 guesses."
+	Print "The correct number was " + randNumb.
+
+
+WHILE playAgain = yes (After player guesses correctly or uses up all 7 guesses)
+  1. Generates another random number and resets guessCount to 0
+  a. Ask user if they want to play again (y/n)
+
+IF playAgain = y
+                 continue (Repeats game)
+
+ELSE
+
+                break (Game ends)
+END IF ELSE
+
+
+END WHILE
+
