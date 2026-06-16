@@ -15,30 +15,36 @@ guessCounter = 0
 playAgain = "y" 
 gameWon = false (if player answers correctly)
 
+WHILE playAgain = "y"
 
 Generate random number between 1 and 100
-  1. randNumb MOD (%) 2.
-     randNumb = RANDOM(1,100)
+  1. randNumb = RANDOM(1,100)
+	 guessCounter = 0
+	 gameWon = false
 
 
 Repeat while the game has yet to be won and less than 7 guesses remaining
-  1. WHILE gameWon = false AND guessCounter < 7
-  2. WHILE userInput is EMPTY or NOT A NUMBER
-  a. Ask user for a number 
-  b. Store input in userInput
-  c. Check if userInput is empty or not a number
+  1.The computer creates the guessing Loop
+    a. WHILE gameWon = false AND guessCounter < 7
 
+  2. Get valid input
+ 	a. Ask user for a number 
+ 	b. Store input in userInput
+    c. Check if userInput is empty or not a number
+
+PRINT "Enter Guess:"
+INPUT userInput
 
 Increases guessCount by 1 (If player guesses incorrectly)
   1. guessCounter = guessCounter + 1
 
 
 Compare the user's guess to the secret number 
-  1. IF userInput < randNumb
+  1. IF userInput < randNumb THEN
 		Print "Too Low."
-     ELSE IF userInput > randNumb
+     ELSE IF userInput > randNumb THEN
 		Print "Too High."
-  3. ELSE userInput = randNumb 
+  3. ELSE userInput = randNumb THEN
 		Print "Correct!"
 		gameWon = true
 	END IF
@@ -46,24 +52,25 @@ Compare the user's guess to the secret number
 END WHILE
 
 After loop ends (User wins or loses) 
-  1. If user won:
-	a. gameWon = true
-	Print "Congrats! You guessed the number in " + guessCount + " guesses!"
-  2. ELSE IF
+  1. If gameWon = true THEN
+	Print "Congrats! You guessed the number in " + guessCounter + " guesses!"
+  2. ELSE
 	Print "You have used up all 7 guesses."
 	Print "The correct number was " + randNumb.
+	END IF
 
 
-WHILE playAgain = yes (After player guesses correctly or uses up all 7 guesses)
+WHILE playAgain = y (After player guesses correctly or uses up all 7 guesses)
   1. Generates another random number and resets guessCount to 0
   a. Ask user if they want to play again (y/n)
 
-IF playAgain = y
+IF playAgain = "y"
                  continue (Repeats game)
 
 ELSE
 
                 break (Game ends)
+				PRINT "Thanks for playing!"
 END IF ELSE
 
 
