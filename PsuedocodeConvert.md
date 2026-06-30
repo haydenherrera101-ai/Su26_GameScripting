@@ -15,23 +15,23 @@ local choice
 - while the math isn't done, keep asking for numbers
 while not mathDone do
 
-    --Get new number from user
+  --Get new number from user
     while (newNum == nil or newNum == "" or not tonumber(newNum)) do
         print("Enter a number to add to the total: ")
         newNum = io.read()
     end
-    --Add to total
+  --Add to total
     sum = sum + newNum
 
-    --reset usernum variable for next loop
+  --reset usernum variable for next loop
     newNum = nil
 
-    --Ask user if they want to add another number
+  --Ask user if they want to add another number
     print("Do you want to add another number? (y/n): ")
     choice = io.read()
     if string.upper(choice) == "N" then
         mathDone = true
-        --print total
+  --print total
         print ("The total sum of all numbers entered is: " .. sum)
         mathDone = true
         break
