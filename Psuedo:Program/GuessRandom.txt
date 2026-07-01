@@ -1,0 +1,59 @@
+--Hayden Herrera
+--06/25/2026
+--Create pseudocode for a number guessing game. Start with the game loop to create this simple game.
+
+
+
+local function printRandomDirection()
+    --variables
+    local randomNum
+    local guessCounter
+    local guess
+    local playAgain = "y"
+    local gameWon
+    local userChoice
+
+-- Initialize playAgain variable to "y" to start the game loop
+    while playAgain == "y" do
+
+
+        -- Generate a random number between 1 to 100
+        randomNum = math.random(1, 100)
+
+        guessCounter = 0
+        gameWon = false
+        --Ask user to guess the number until they get it right or run out of guesses
+        while gameWon == false and guessCounter < 7 do
+
+           repeat
+            print("Guess a number between 1 and 100: ")
+            userChoice = io.read()
+           until
+           --Checks if the user's input is a valid number between 1 and 100
+            (tonumber(userChoice) ~= nil and tonumber(userChoice) >= 1 and tonumber(userChoice) <= 100)
+
+            guess = tonumber(userChoice)
+            guessCounter = guessCounter + 1
+           -- Compares the user's guess to the random number and gives feedback
+            if guess > randomNum then
+                print("Too high! Try again.")
+            elseif guess < randomNum then
+                print("Too low! Try again.")
+            else
+                gameWon = true
+            end
+        end
+
+        if not gameWon then
+            print("Sorry, you've used all your guesses. The correct number was: " .. randomNum)
+        end
+
+        print("Do you want to play again? (y/n): ")
+        playAgain = io.read()
+    end
+
+    print("Thanks for playing!")
+
+end
+
+printRandomDirection()
