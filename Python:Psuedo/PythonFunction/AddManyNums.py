@@ -42,7 +42,7 @@ def InputIsEnter(userInput):
 #Master error check
 def TryAgain(userInput):
     while InputIsLetter(userInput) or InputIsSpace(userInput) or InputIsEnter(userInput):
-        userInput("Please enter valid number: ")
+        userInput = input("Please enter valid number: ")
     return userInput
 
 #Keep asking for input until user enters a number
