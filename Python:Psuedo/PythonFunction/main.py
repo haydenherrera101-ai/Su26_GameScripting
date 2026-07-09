@@ -2,4 +2,4 @@
 #import AddTwoNums
 #import AddManyNums
 #import EvenOdd
-import CompRandom
+#import CompRandom
