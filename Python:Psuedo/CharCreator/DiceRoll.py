@@ -1,3 +1,7 @@
+# Author: Hayden Herrera
+# Date: 2026-09-07
+# Description: This is for determining dice roll
+
 import random
 
 def dice(sides):

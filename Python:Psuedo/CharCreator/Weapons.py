@@ -1,3 +1,8 @@
+# Author: Hayden Herrera
+# Date: 2026-09-07
+# Description: This program would give out an attack and the stats of the weapons used.
+
+
 import random
 #Name, min damage, max damage
 weaponList = {1: ["Chain Sword", 25, 75], 2: ["Bolter Gun", 10, 55]}
