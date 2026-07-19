@@ -2,7 +2,9 @@
 # Author: Hayden Herrera
 # Date: 2026-10-07
 # Description: This program creates a Text Adventure with min. 10 prompts for the user
-# It will be a interactive adventure which uses text commands when given choices which will influence the outcome of the game or story.
+# It will be a interactive adventure which uses text commands when given choices which will influence the outcome of the game or story. 
+# This kind of interactive adventure would dive into two friends heading home and would attempt to
+# take a shortcut into a mysterious forest which lies a unknown being.
 
 import sys
 from time import sleep
@@ -48,7 +50,7 @@ def introHome():
     playerName = input("> ")
 
     while len(playerName) < 1 or playerName.isspace() or not playerName.isalpha():
-        print("Please enter you name.")
+        print("Please enter your first name only.")
         playerName = input("> ")
 
     """On your way driving home with your friend Fred, Fred would take a shortcut within the forest."""
@@ -114,11 +116,11 @@ def forest():
 
     sleep(1.5)
 
-    print("\nBefore he could finish, the car unknowningly collides with something and would cause it to shake aggressively.")
+    print("\nBefore he could finish, the car unknowingly collides with something and would cause it to shake aggressively.")
 
     sleep(3)
 
-    print("Fred pushes the brakes immediatly, his face turning slightly pale.")
+    print("Fred pushes the brakes immediately, his face turning slightly pale.")
 
     sleep(3)
 
@@ -146,105 +148,107 @@ def investigate():
     choice = checkChoice(input("> "), ["1", "2"])
 
     if choice == "1":
-        print("\nYou inspect the vehicle and discover the front tire has completely blown out.")
-        sleep(2)
+            print("\nYou inspect the vehicle and discover the front tire has completely blown out.")
+            sleep(2)
     else:
-        print("\nYou shine your phone around the road but only find blood across the track and seems to be leading into the woods.")
-        sleep(2)
-        print("\nFred: Hey, focus! We got to see if the car is alright.")
-        sleep(2)
-        print("As Fred inspects the car, he finally assesses the damages.")
-
-        sleep(3)
-        print("\nFred: Dammit! The tire is busted, I'm going to grab a spare tire on the back. Just stay right there.")
-
-        sleep(2)
-
-        print("You understand the situation and await for Fred to ask for help. . .")
-
-        sleep(5)
-
-        print("\nHowever. . .")
-
-        sleep(3)
-
-        print("\nYou hear a faint animalistic grown only a few feet away. You believe that's what they hit.")
-
-        sleep(2)
-
-        print(playerName + ": What was that?")
-
-        print("\nShould you investigate:")
-        print("1. Yes")
-        print("2. No")
-
-
-        choice2 = checkChoice(input("> "), ["1", "2"])
-
-
-        if choice2 == "1":
-
-            print("\nWhile you wait for Fred to fix up the tire, you decide to walk up to the creature.")
+            print("\nYou shine your phone around the road but only find blood across the track and seems to be leading into the woods.")
+            sleep(2)
+            print("\nFred: Hey, focus! We got to see if the car is alright.")
+            sleep(2)
+            print("As Fred inspects the car, he finally assesses the damages.")
 
             sleep(3)
+    print("\nFred: Dammit! The tire is busted, I'm going to grab a spare tire on the back. Just stay right there.")
 
-            print("As you approach the creature, you flash it with your phone light to get a better look.")
+    sleep(2)
 
-            sleep(4)
+    print("You understand the situation and await for Fred to ask for help. . .")
 
-            print("The appearance of this unknown creature has a highly grotesque, asymmetric, and chaotic amalgamation. This was no animal. This was an abomination. . .")
+    sleep(5)
 
-            sleep(2)
+    print("\nHowever. . .")
 
-            print("Its amalgamated body would begin to move slowly and would stare directly at you as it starts to utter words.")
+    sleep(3)
 
-            sleep(2)
+    print("\nYou hear a faint animalistic growl only a few feet away. You believe that's what they hit.")
 
-            print("\nThe creature slowly stares at you.")
+    sleep(2)
 
-            sleep(2)
+    print(playerName + ": What was that?")
 
-            print("\nWhat do you do?")
-            print("1. Stand completely still.")
-            print("2. Slowly back away.")
-
-            choice = checkChoice(input("> "), ["1", "2"])
-
-            if choice == "1":
-                print("\nThe creature tilts its head but doesn't attack.")
-            else:
-                print("\nYou carefully step backwards while keeping your eyes on it.")
-
-            sleep(4)
-
-            print("\nEntity: Mors tibi imminet... Poenas dabis...")
-
-            sleep(2)
-
-            print("\n" + playerName + ": Oh my god. . . ")
-
-            sleep(2)
-
-            print("As it slowly regains its strength, you hastily run back towards the car to warn Fred.")
-
-            sleep(4)
-
-            print("Fred happens to see you, however, he is very upset that you left him there.")
-
-            sleep(2)
-
-            print("\nFred: I told you to stay here! where have you been?")
-
-            sleep(2)
-
-            print("Fred then stops after hearing a random sound that came from the forest and notice a creature slowly approaching from afar.")
-
-            sleep(3)
+    print("\nShould you investigate:")
+    print("1. Yes")
+    print("2. No")
 
 
+    choice2 = checkChoice(input("> "), ["1", "2"])
+
+
+    if choice2 == "1":
+
+        print("\nWhile you wait for Fred to fix up the tire, you decide to walk up to the creature.")
+
+        sleep(3)
+
+        print("As you approach the creature, you flash it with your phone light to get a better look.")
+
+        sleep(4)
+
+        print("The appearance of this unknown creature has a highly grotesque, asymmetric, and chaotic amalgamation. This was no animal. This was an abomination. . .")
+
+        sleep(2)
+
+        print("Its amalgamated body would begin to move slowly and would stare directly at you as it starts to utter words.")
+
+        sleep(2)
+
+        print("\nThe creature slowly stares at you.")
+
+        sleep(2)
+
+        print("\nWhat do you do?")
+        print("1. Stand completely still.")
+        print("2. Slowly back away.")
+
+        choice = checkChoice(input("> "), ["1", "2"])
+
+        if choice == "1":
+            print("\nThe creature tilts its head but doesn't attack.")
         else:
+            print("\nYou carefully step backwards while keeping your eyes on it.")
 
-            print("Though curiousity was running your mind. You would rather stay with Fred in order to get out of this forest.")
+        sleep(4)
+
+        print("\nEntity: Mors tibi imminet... Poenas dabis...")
+
+        sleep(2)
+
+        print("\n" + playerName + ": Oh my god. . . ")
+
+        sleep(2)
+
+        print("As it slowly regains its strength, you hastily run back towards the car to warn Fred.")
+
+        sleep(4)
+
+        print("Fred happens to see you, however, he is very upset that you left him there.")
+
+        sleep(2)
+
+        print("\nFred: I told you to stay here! where have you been?")
+
+        sleep(2)
+
+        print("Fred then stops after hearing a random sound that came from the forest and notice a creature slowly approaching from afar.")
+
+        sleep(3)
+
+        runOrhide()
+
+
+    else:
+
+            print("Though curiosity was running your mind. You would rather stay with Fred in order to get out of this forest.")
 
             sleep(3)
 
@@ -463,7 +467,7 @@ def escapeForest():
         sleep(2)
         print("\n" + playerName + ": OKAY, WE GOT IT!")
     else:
-        "\n" + playerName + ": Hey! You know cars better than me! I'll be on look out!"
+        print("\n" + playerName + ": Hey! You know cars better than me! I'll be on look out!")
         sleep(2)
         print("Fred: Fine! Just make sure it isn't near while I fix this!")
         print("\nYou scan the darkness while Fred struggles with the tire.")
@@ -571,7 +575,7 @@ def badEnd():
     print("You convince yourself that Fred is already gone.")
     sleep(3)
 
-    print("You would hear a faint cry from both Fred and the creature as if they were screaming syncronously.")
+    print("You would hear a faint cry from both Fred and the creature as if they were screaming synchronously.")
 
     print("Without looking back, you sprint through the forest until you finally reach the road.")
     sleep(3)
@@ -642,7 +646,8 @@ def theEnd():
     playAgain()
 
 
-
+#Replay Function. Once prompt is entered "y", will send the game back to the beginning story chunks
+#and follows up with the error checks. If "n", game will immediately end to prevent potential loops.
 def playAgain():
     replay = checkYN(input("\n Would you like to play again (y/n): "), "y", "n")
 
