@@ -9,6 +9,8 @@ import sys
 import pygame
 import random
 
+
+#-----------INITIALIZER-------------
 pygame.init() #Starts off Chicken Drop
 
 #Scene Setup
