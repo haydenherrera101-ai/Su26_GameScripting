@@ -1,6 +1,6 @@
 import time
-import Player
-import Helpers
+import TextAdventure2.Player as Player
+import TextAdventure2.Helpers as Helpers
 
 
 displaying_menu = True

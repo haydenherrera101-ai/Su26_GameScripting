@@ -14,12 +14,12 @@
 
 
 
-import Cave
-import Tunnel
-import Player
-import Alley
-import Trolley
-import BossRoom
+import TextAdventure2.Cave as Cave
+import TextAdventure2.Tunnel as Tunnel
+import TextAdventure2.Player as Player
+import TextAdventure2.Alley as Alley
+import TextAdventure2.Trolley as Trolley
+import TextAdventure2.BossRoom as BossRoom
 
 def main():
     Cave.start_description()

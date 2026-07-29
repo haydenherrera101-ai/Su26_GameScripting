@@ -1,6 +1,6 @@
 import sys
-import Player
-import Helpers
+import TextAdventure2.Player as Player
+import TextAdventure2.Helpers as Helpers
 
 # only displays once, upon entering the boss room
 def room_description():

@@ -1,6 +1,6 @@
-import Helpers
+import TextAdventure2.Helpers as Helpers
 import time
-import Player
+import TextAdventure2.Player as Player
 
 displaying_menu = True
 examined_room = False
